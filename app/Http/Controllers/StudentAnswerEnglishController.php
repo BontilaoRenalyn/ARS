@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\StudentAnswer;
+use App\Models\StudentAnswerEnglish;
 
-class StudentAnswerController extends Controller
+class StudentAnswerEnglishController extends Controller
 {
     public function store(Request $request)
     {
@@ -41,7 +41,7 @@ class StudentAnswerController extends Controller
         }
 
         // Save to database
-        StudentAnswer::create([
+        StudentAnswerEnglish::create([
             'student_id' => $request->student_id,
             'c1' => $request->c1,
             'c2' => $request->c2,

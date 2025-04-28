@@ -4,13 +4,13 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStudentAnswersTable extends Migration
+class CreateStudentAnswerEnglishTable extends Migration // Class name matches filename convention
 {
     public function up()
     {
-        Schema::create('student_answers', function (Blueprint $table) {
+        Schema::create('student_answer_english', function (Blueprint $table) {
             $table->id();
-            $table->string('student_id');
+            $table->string('student_id'); // or $table->unsignedBigInteger('student_id') for foreign key
             $table->string('c1');
             $table->string('c2');
             $table->string('c3');
@@ -25,6 +25,6 @@ class CreateStudentAnswersTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('student_answers');
+        Schema::dropIfExists('student_answer_english');
     }
 }

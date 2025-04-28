@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentAnswerController;
+use App\Http\Controllers\StudentAnswerEnglishController;
 
-Route::post('/student/add', [StudentAnswerController::class, 'store']);
+Route::post('/student/add', [StudentAnswerEnglishController::class, 'store']);
 
 
 Route::get('/', function () {
