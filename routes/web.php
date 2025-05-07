@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentAnswerEnglishController;
+use App\Http\Controllers\StudentAnswerTagalogController;
 
 Route::post('/student/add', [StudentAnswerEnglishController::class, 'store']);
+Route::post('/student/add', [StudentAnswerTagalogController::class, 'store']);
 
 
 Route::get('/', function () {

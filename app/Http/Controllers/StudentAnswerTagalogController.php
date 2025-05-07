@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\StudentAnswerEnglish;
+use App\Models\StudentAnswerTagalog;
 
 class StudentAnswerTagalogController extends Controller
 {
