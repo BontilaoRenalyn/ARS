@@ -27,7 +27,13 @@
                 </div>
             </div><br>
 
-            <form action = "{{ url('student/add')}}" method ="post">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            <form action="{{ url('student/add') }}" method="post">
             {{ csrf_field() }}
                 <div class="wquestions container">
                     <div class="text-justify p-4 col-md-12">
@@ -38,150 +44,62 @@
                             <input class="form-control w-25 custom-input" name="student_id" type="text" aria-label="ID Number">
                         </div>
                         <br>
-                        
-                        <div>
+
+
+                        <div class=" questions text-justify p-3 col-md-12">
                             <div class=" questions text-justify p-3 col-md-12">
-                                <p class="mt-3">1. Ano ang ginamit na mga numero upang ipahayag ang oras?</p>
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c01">
-                                        <label for = "011c">A.  isa hanggang siyam</label>
-                                    </div>
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c01">
-                                        <label for = "012c">B. isa hanggang labindalawa</label>
-                                    </div>
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c01">
-                                        <label for = "013c">C. isa hanggang tatlumpu</label>
-                                    </div class ="choice">
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c01">
-                                        <label for = "014c">D. isa hanggang dalawampu't apat</label>
-                                    </div>
-                            </div><br>
+                                <p>1. Ano ang ginamit na mga numero upang ipahayag ang oras?</p>
+                                <div class="choice"><input type="radio" name="c1" value="A"> A. isa hanggang siyam</div>
+                                <div class="choice"><input type="radio" name="c1" value="B"> B. isa hanggang labindalawa</div>
+                                <div class="choice"><input type="radio" name="c1" value="C"> C. isa hanggang tatlumpu</div>
+                                <div class="choice"><input type="radio" name="c1" value="D"> D. isa hanggang dalawampu't apat</div>
+                            </div>
 
                             <div class=" questions text-justify p-3 col-md-12">
-                                <p>2. Bakit nagdulot ng kalituhan na may isang numero na ginagamit ng dalawang beses?</p>
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c02">
-                                        <label for = "021c">A. pagkakaiba</label>
-                                    </div>
+                                <p>2. Bakit nagdulot ng kalituhan na may isang numero na ginagamit ng dalawang beses? </p>
+                                <div class="choice"><input type="radio" name="c2" value="A"> A. pagkakaiba</div>
+                                <div class="choice"><input type="radio" name="c2" value="B"> B. talakayan</div>
+                                <div class="choice"><input type="radio" name="c2" value="C"> C. problema</div>
+                                <div class="choice"><input type="radio" name="c2" value="D"> D. pagkakamali</div>
+                            </div>
 
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c02">
-                                        <label for = "022c">B. talakayan</label>
-                                    </div>
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c02">
-                                        <label for = "023c">C. problema</label>
-                                    </div class ="choice">
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c02">
-                                        <label for = "024c">D. pagkakamali</label>
-                                    </div>    
-                            </div><br>
-
-                            <div class="questions text-justify p-3 col-md-12">
+                            <div class=" questions text-justify p-3 col-md-12">
                                 <p>3. Ano ang ibig sabihin ng mga Romano na nakapagbigay ng solusyon?</p>
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c03">
-                                        <label for = "031c">A. isang sagot sa problema</label>
-                                    </div>
+                                <div class="choice"><input type="radio" name="c3" value="A"> A. isang sagot sa problema</div>
+                                <div class="choice"><input type="radio" name="c3" value="B"> B. mas mahusay na interpretasyon</div>
+                                <div class="choice"><input type="radio" name="c3" value="C"> C. bagong set ng mga numer</div>
+                                <div class="choice"><input type="radio" name="c3" value="D"> D. ibang orasan</div>
+                            </div>
 
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c03">
-                                        <label for = "032c">B. mas mahusay na interpretasyon</label>
-                                    </div>
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c03">
-                                        <label for = "033c">C. bagong set ng mga numero</label>
-                                    </div class ="choice">
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c03">
-                                        <label for = "034c">D. ibang orasan</label>
-                                    </div>    
-                            </div><br>
-
-                            <div class="questions text-justify p-3 col-md-12">
+                            <div class=" questions text-justify p-3 col-md-12">
                                 <p>4. Ano ang kahulugan ng Meridies?</p>
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c04">
-                                        <label for = "041c">A. pinakamataas na punto</label>
-                                    </div>
+                                <div class="choice"><input type="radio" name="c4" value="A"> A. pinakamataas na punto</div>
+                                <div class="choice"><input type="radio" name="c4" value="B"> B. tanghali</div>
+                                <div class="choice"><input type="radio" name="c4" value="C"> C. bago</div>
+                                <div class="choice"><input type="radio" name="c4" value="D"> D. liwanag</div>
+                            </div>
 
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c04">
-                                        <label for = "042c">B. tanghali</label>
-                                    </div>
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c04">
-                                        <label for = "043c">C. bago</label>
-                                    </div class ="choice">
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c04">
-                                        <label for = "044c">D. liwanag</label>
-                                    </div>    
-                            </div><br>
-
-                            <div class="questions text-justify p-3 col-md-12">
+                            <div class=" questions text-justify p-3 col-md-12">
                                 <p>5. Ano ang ibig sabihin ng apex?</p>
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c05">
-                                        <label for = "051c">A. pinakamataas na punto</label>
-                                    </div>
+                                <div class="choice"><input type="radio" name="c5" value="A"> A. pinakamataas na punto</div>
+                                <div class="choice"><input type="radio" name="c5" value="B"> B. pinakamababa na punto</div>
+                                <div class="choice"><input type="radio" name="c5" value="C"> C. pinakamalayong punto</div>
+                                <div class="choice"><input type="radio" name="c5" value="D"> D. pinakamalapit na punto</div>
+                            </div>
 
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c05">
-                                        <label for = "052c">B. pinakamababa na punto</label>
-                                    </div>
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c05">
-                                        <label for = "053c">C. pinakamalayong punto</label>
-                                    </div class ="choice">
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c05">
-                                        <label for = "054c">D. pinakamalapit na punto</label>
-                                    </div>    
-                            </div><br>
-
-                            <div class="questions text-justify p-3 col-md-12">
+                            <div class=" questions text-justify p-3 col-md-12">
                                 <p>6. Isang magandang pamagat para sa seleksyon na ito ay _____________.</p>
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c6">
-                                        <label for = "61c">A. Bakit Dalawampu’t Apat na Oras ang Isang Araw </label>
-                                    </div>
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c6">
-                                        <label for = "62c">B. Bakit Mahalaga ang Tanghali sa mga Romano </label>
-                                    </div>
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c6">
-                                        <label for = "63c">C. Paano Nagsukat ng Oras ang mga Romano</label>
-                                    </div class ="choice">
-
-                                    <div class ="choice">
-                                        <input type = "radio" name = "c6">
-                                        <label for = "64c">D. Ang Kahulugan ng A.M. at P.M.</label>
-                                    </div>    
-                            </div><br>  
+                                <div class="choice"><input type="radio" name="c6" value="A"> A. Bakit Dalawampu’t Apat na Oras ang Isang Araw </div>
+                                <div class="choice"><input type="radio" name="c6" value="B"> B. Bakit Mahalaga ang Tanghali sa mga Romano</div>
+                                <div class="choice"><input type="radio" name="c6" value="C"> C. Paano Nagsukat ng Oras ang mga Romano</div>
+                                <div class="choice"><input type="radio" name="c6" value="D"> D. Ang Kahulugan ng A.M. at P.M.</div>
+                            </div>
                         </div>
                         <br>
-                            <button type="submit">Submit</button>
-                            <button type="reset">Clear Form</button>
-                        <br>            
-                    </div>
+                                    <button type="submit">Submit</button>
+                                    <button type="reset">Clear Form</button>
+                                    <br>
+                                             
+                    </div>  
                 </div><br>
 @endsection
