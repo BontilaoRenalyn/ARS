@@ -10,7 +10,6 @@ class CreateStudentAnswerTagalogTable extends Migration // Class name matches fi
     {
         Schema::create('student_answer_tagalog', function (Blueprint $table) {
             $table->id();
-            $table->string('student_id'); // or $table->unsignedBigInteger('student_id') for foreign key
             $table->string('c1');
             $table->string('c2');
             $table->string('c3');

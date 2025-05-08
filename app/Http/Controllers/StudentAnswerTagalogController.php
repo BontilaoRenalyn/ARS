@@ -21,7 +21,6 @@ class StudentAnswerTagalogController extends Controller
 
         // Validate input
         $request->validate([
-            'student_id' => 'required',
             'c1' => 'required',
             'c2' => 'required',
             'c3' => 'required',
@@ -40,7 +39,6 @@ class StudentAnswerTagalogController extends Controller
 
         // Save to database
         StudentAnswerTagalog::create([
-            'student_id' => $request->student_id,
             'c1' => $request->c1,
             'c2' => $request->c2,
             'c3' => $request->c3,

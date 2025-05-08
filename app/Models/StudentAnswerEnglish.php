@@ -11,7 +11,6 @@ class StudentAnswerEnglish extends Model
 
     protected $table = 'student_answer_english';
     protected $fillable = [
-        'student_id',
         'c1',
         'c2',
         'c3',

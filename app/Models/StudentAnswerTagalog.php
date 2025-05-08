@@ -11,7 +11,6 @@ class StudentAnswerTagalog extends Model
 
     protected $table = 'student_answer_tagalog';
     protected $fillable = [
-        'student_id',
         'c1',
         'c2',
         'c3',

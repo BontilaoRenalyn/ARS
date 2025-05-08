@@ -8,24 +8,22 @@ Route::post('/student/add', [StudentAnswerEnglishController::class, 'store']);
 Route::post('/student/add', [StudentAnswerTagalogController::class, 'store']);
 
 
+
+
 Route::get('/', function () {
-    return view('main');
+    return view('stud-dash');
 });
 
-Route::get('/about', function () {
-    return view('about');
+Route::get('/stud-eng', function () {
+    return view('stud-eng');
 });
 
-Route::get('/students-eng', function () {
-    return view('students-eng');
+Route::get('/stud-fil', function () {
+    return view('stud-fil');
 });
 
-Route::get('/students-tag', function () {
-    return view('students-tag');
-});
-
-Route::get('/students-results', function () {
-    return view('students-results');
+Route::get('/stud-reports', function () {
+    return view('stud-reports');
 });
 
 
