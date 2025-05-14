@@ -26,6 +26,11 @@ Route::get('/stud-reports', function () {
     return view('stud-reports');
 });
 
+Route::get('/1', function () {
+    return view('1');
+});
+
+
 
 
 

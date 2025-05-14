@@ -4,18 +4,6 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="dashboard">
-            <!-- Student Profile Section -->
-            <div class="profile-section">
-                <div class="profile-card">
-                    <div class="profile-header">
-                        <img src="{{ asset('pic/profile.png') }}" alt="Student Profile" class="profile-image">
-                        <div class="profile-info">
-                            <h2>Alibanga, Alexander Ven A.</h2>
-                            <p>Grade 7: Section Narra</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- English Language Results -->
             <div class="results-section">
                 <div class="results-header">
@@ -52,8 +40,50 @@
                     </div>
                 </div>
                 <div class="feedback-section">
-                    <label for="englishFeedback">Teacher's Feedback:</label>
-                    <textarea class="form-control" id="englishFeedback" rows="4" readonly>This is where the teacher's feedback will appear.</textarea>
+                    <div class="feedback-history">
+                            <h4>Teacher's Feedbacks</h4>
+                        <div class="feedback-item">
+                            <div class="feedback-meta">
+                                <span>Date: December 15, 2025</span>
+                                <span>Reading Level: Grade 7</span>
+                            </div>
+                            <div class="feedback-content">
+                                <p><strong>Strengths:</strong> Good comprehension of main ideas and vocabulary usage.</p>
+                                <p><strong>Areas for Improvement:</strong> Needs to work on reading pace and pronunciation.</p>
+                                <p><strong>Recommendations:</strong> Practice reading aloud daily and use phonics exercises.</p>
+                            </div>
+                            <div class="feedback-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4/5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-history">
+                        <div class="feedback-item">
+                            <div class="feedback-meta">
+                                <span>Date: March 30, 2024</span>
+                                <span>Reading Level: Grade 7</span>
+                            </div>
+                            <div class="feedback-content">
+                                <p><strong>Strengths:</strong> Good comprehension of main ideas and vocabulary usage.</p>
+                                <p><strong>Areas for Improvement:</strong> Needs to work on reading pace and pronunciation.</p>
+                                <p><strong>Recommendations:</strong> Practice reading aloud daily and use phonics exercises.</p>
+                            </div>
+                            <div class="feedback-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4/5</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -93,10 +123,53 @@
                     </div>
                 </div>
                 <div class="feedback-section">
-                    <label for="filipinoFeedback">Teacher's Feedback:</label>
-                    <textarea class="form-control" id="filipinoFeedback" rows="4" readonly>This is where the teacher's feedback will appear.</textarea>
+                    <div class="feedback-history">
+                            <h4>Teacher's Feedbacks</h4>
+                        <div class="feedback-item">
+                            <div class="feedback-meta">
+                                <span>Date: December 15, 2025</span>
+                                <span>Reading Level: Grade 7</span>
+                            </div>
+
+                            <div class="feedback-content">
+                                <p><strong>Strengths:</strong> Good comprehension of main ideas and vocabulary usage.</p>
+                                <p><strong>Areas for Improvement:</strong> Needs to work on reading pace and pronunciation.</p>
+                                <p><strong>Recommendations:</strong> Practice reading aloud daily and use phonics exercises.</p>
+                            </div>
+
+                            <div class="feedback-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4/5</span>
+                            </div>
+                        </div>
+
+                        <div class="feedback-item">
+                            <div class="feedback-meta">
+                                <span>Date: December 15, 2025</span>
+                                <span>Reading Level: Grade 7</span>
+                            </div>
+
+                            <div class="feedback-content">
+                                <p><strong>Strengths:</strong> Good comprehension of main ideas and vocabulary usage.</p>
+                                <p><strong>Areas for Improvement:</strong> Needs to work on reading pace and pronunciation.</p>
+                                <p><strong>Recommendations:</strong> Practice reading aloud daily and use phonics exercises.</p>
+                            </div>
+
+                            <div class="feedback-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4/5</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
             <!-- Detailed Results Table -->
             <div class="results-section">
@@ -170,7 +243,6 @@
                     </table>
                 </div>
             </div>
-</div>
         </div>
     </div>
 
@@ -375,19 +447,156 @@
             margin-top: 20px;
         }
 
-        .feedback-section label {
-            display: block;
-            margin-bottom: 10px;
+        .feedback-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #0E61BA;
+        }
+
+        .feedback-header h3 {
+            color: #0E61BA;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .feedback-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .feedback-group {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .feedback-group label {
             color: #2c3e50;
             font-weight: 500;
         }
 
-        .feedback-section textarea {
+        .feedback-input {
             width: 100%;
-            padding: 10px;
+            padding: 0.8rem;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .feedback-input:focus {
+            outline: none;
+            border-color: #0E61BA;
+            box-shadow: 0 0 0 2px rgba(14, 97, 186, 0.1);
+        }
+
+        .rating-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .rating-stars i {
+            color: #ddd;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .rating-stars i.active {
+            color: #F9A602;
+        }
+
+        .rating-stars i:hover {
+            transform: scale(1.1);
+        }
+
+        .feedback-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-top: 1rem;
+        }
+
+        .btn-save {
+            background: #0E61BA;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-save:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .btn-cancel {
+            background: #f5f6fa;
+            color: #2c3e50;
+            border: 1px solid #ddd;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cancel:hover {
+            background: #ddd;
+        }
+
+        .feedback-history {
+            margin-top: 2rem;
+        }
+
+        .feedback-history h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .feedback-item {
             background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .feedback-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feedback-content {
+            color: #2c3e50;
+            line-height: 1.5;
+        }
+
+        .feedback-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .feedback-rating i {
+            color: #F9A602;
         }
 
         .results-table {
@@ -722,5 +931,191 @@
                 }
             }
         });
+
+        // English Feedback Form Functionality
+        const englishFeedbackForm = document.getElementById('englishFeedbackForm');
+        const englishReadingRating = document.getElementById('englishReadingRating');
+        const englishRatingValue = document.getElementById('englishRatingValue');
+        let englishCurrentRating = 0;
+
+        // Star Rating Functionality - English
+        englishReadingRating.addEventListener('click', (e) => {
+            if (e.target.classList.contains('fa-star')) {
+                const rating = parseInt(e.target.dataset.rating);
+                englishCurrentRating = rating;
+                updateEnglishStars(rating);
+                englishRatingValue.textContent = `${rating}/5`;
+            }
+        });
+
+        englishReadingRating.addEventListener('mouseover', (e) => {
+            if (e.target.classList.contains('fa-star')) {
+                const rating = parseInt(e.target.dataset.rating);
+                updateEnglishStars(rating);
+            }
+        });
+
+        englishReadingRating.addEventListener('mouseout', () => {
+            updateEnglishStars(englishCurrentRating);
+        });
+
+        function updateEnglishStars(rating) {
+            const stars = englishReadingRating.querySelectorAll('i');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        // Form Submission - English
+        englishFeedbackForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const feedback = {
+                rating: englishCurrentRating,
+                strengths: document.getElementById('englishStrengths').value,
+                areasForImprovement: document.getElementById('englishAreasForImprovement').value,
+                recommendations: document.getElementById('englishRecommendations').value,
+                date: new Date().toLocaleDateString()
+            };
+
+            // Here you would typically send this to your backend
+            console.log('English Feedback submitted:', feedback);
+            
+            // Add to feedback history (for demo purposes)
+            addEnglishFeedbackToHistory(feedback);
+            
+            // Reset form
+            resetEnglishFeedback();
+        });
+
+        function resetEnglishFeedback() {
+            englishFeedbackForm.reset();
+            englishCurrentRating = 0;
+            updateEnglishStars(0);
+            englishRatingValue.textContent = '0/5';
+        }
+
+        function addEnglishFeedbackToHistory(feedback) {
+            const feedbackHistory = document.querySelector('#englishFeedbackForm').nextElementSibling;
+            const feedbackItem = document.createElement('div');
+            feedbackItem.className = 'feedback-item';
+            
+            feedbackItem.innerHTML = `
+                <div class="feedback-meta">
+                    <span>Date: ${feedback.date}</span>
+                    <span>Reading Level: Grade 7</span>
+                </div>
+                <div class="feedback-content">
+                    <p><strong>Strengths:</strong> ${feedback.strengths}</p>
+                    <p><strong>Areas for Improvement:</strong> ${feedback.areasForImprovement}</p>
+                    <p><strong>Recommendations:</strong> ${feedback.recommendations}</p>
+                </div>
+                <div class="feedback-rating">
+                    ${Array(5).fill().map((_, i) => 
+                        `<i class="${i < feedback.rating ? 'fas' : 'far'} fa-star"></i>`
+                    ).join('')}
+                    <span>${feedback.rating}/5</span>
+                </div>
+            `;
+            
+            feedbackHistory.insertBefore(feedbackItem, feedbackHistory.querySelector('.feedback-item'));
+        }
+
+        // Filipino Feedback Form Functionality
+        const filipinoFeedbackForm = document.getElementById('filipinoFeedbackForm');
+        const filipinoReadingRating = document.getElementById('filipinoReadingRating');
+        const filipinoRatingValue = document.getElementById('filipinoRatingValue');
+        let filipinoCurrentRating = 0;
+
+        // Star Rating Functionality - Filipino
+        filipinoReadingRating.addEventListener('click', (e) => {
+            if (e.target.classList.contains('fa-star')) {
+                const rating = parseInt(e.target.dataset.rating);
+                filipinoCurrentRating = rating;
+                updateFilipinoStars(rating);
+                filipinoRatingValue.textContent = `${rating}/5`;
+            }
+        });
+
+        filipinoReadingRating.addEventListener('mouseover', (e) => {
+            if (e.target.classList.contains('fa-star')) {
+                const rating = parseInt(e.target.dataset.rating);
+                updateFilipinoStars(rating);
+            }
+        });
+
+        filipinoReadingRating.addEventListener('mouseout', () => {
+            updateFilipinoStars(filipinoCurrentRating);
+        });
+
+        function updateFilipinoStars(rating) {
+            const stars = filipinoReadingRating.querySelectorAll('i');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        // Form Submission - Filipino
+        filipinoFeedbackForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const feedback = {
+                rating: filipinoCurrentRating,
+                strengths: document.getElementById('filipinoStrengths').value,
+                areasForImprovement: document.getElementById('filipinoAreasForImprovement').value,
+                recommendations: document.getElementById('filipinoRecommendations').value,
+                date: new Date().toLocaleDateString()
+            };
+
+            // Here you would typically send this to your backend
+            console.log('Filipino Feedback submitted:', feedback);
+            
+            // Add to feedback history (for demo purposes)
+            addFilipinoFeedbackToHistory(feedback);
+            
+            // Reset form
+            resetFilipinoFeedback();
+        });
+
+        function resetFilipinoFeedback() {
+            filipinoFeedbackForm.reset();
+            filipinoCurrentRating = 0;
+            updateFilipinoStars(0);
+            filipinoRatingValue.textContent = '0/5';
+        }
+
+        function addFilipinoFeedbackToHistory(feedback) {
+            const feedbackHistory = document.querySelector('#filipinoFeedbackForm').nextElementSibling;
+            const feedbackItem = document.createElement('div');
+            feedbackItem.className = 'feedback-item';
+            
+            feedbackItem.innerHTML = `
+                <div class="feedback-meta">
+                    <span>Date: ${feedback.date}</span>
+                    <span>Reading Level: Grade 7</span>
+                </div>
+                <div class="feedback-content">
+                    <p><strong>Strengths:</strong> ${feedback.strengths}</p>
+                    <p><strong>Areas for Improvement:</strong> ${feedback.areasForImprovement}</p>
+                    <p><strong>Recommendations:</strong> ${feedback.recommendations}</p>
+                </div>
+                <div class="feedback-rating">
+                    ${Array(5).fill().map((_, i) => 
+                        `<i class="${i < feedback.rating ? 'fas' : 'far'} fa-star"></i>`
+                    ).join('')}
+                    <span>${feedback.rating}/5</span>
+                </div>
+            `;
+            
+            feedbackHistory.insertBefore(feedbackItem, feedbackHistory.querySelector('.feedback-item'));
+        }
     </script>
 @endsection

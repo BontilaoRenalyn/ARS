@@ -4,6 +4,18 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="dashboard">
+            <!-- Student Profile Section -->
+            <div class="profile-section">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <img src="{{ asset('pic/profile.png') }}" alt="Student Profile" class="profile-image">
+                        <div class="profile-info">
+                            <h2>Alibanga, Alexander Ven A.</h2>
+                            <p>Grade 7: Section Narra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Quick Stats Overview -->
             <div class="stats-overview">
                 <div class="stat-card">
@@ -11,7 +23,7 @@
                         <i class="fas fa-book"></i>
                     </div>
                     <div class="stat-info">
-                        <h3>Reading Progress</h3>
+                        <h3>Test Progress</h3>
                         <p class="stat-number">85%</p>
                         <p class="stat-label">Overall Completion</p>
                     </div>
@@ -62,7 +74,7 @@
                             <i class="fas fa-spinner"></i>
                         </div>
                         <div class="activity-details">
-                            <h4>Filipino Comprehension</h4>
+                            <h4>English Comprehension</h4>
                             <p>In progress - 60% complete</p>
                             <span class="activity-time">1 hour ago</span>
                         </div>
@@ -73,9 +85,20 @@
                             <i class="fas fa-check"></i>
                         </div>
                         <div class="activity-details">
-                            <h4>Word Reading Practice</h4>
-                            <p>Completed with 92% score</p>
-                            <span class="activity-time">3 hours ago</span>
+                            <h4>Filipino Reading Exercise</h4>
+                            <p>Completed with 85% score</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon in-progress">
+                            <i class="fas fa-spinner"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Filipino Comprehension</h4>
+                            <p>In progress - 60% complete</p>
+                            <span class="activity-time">1 hour ago</span>
                         </div>
                     </div>
                 </div>
