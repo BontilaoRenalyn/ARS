@@ -1,5 +1,7 @@
 @extends('head')
 
+@section('title', 'Student Dashboard')
+
 @section('content')
     <!-- Main Content -->
     <div class="main-content">

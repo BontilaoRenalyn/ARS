@@ -1,12 +1,14 @@
 @extends('head')
 
+@section('title', 'Filipino Questions')
+
 @section('content')
 
     <!-- Main Content -->
     <div class="main-content">
         <div class="dashboard">
             <div class="dashboard-header">
-                <h1>Filipino Reading</h1>
+                <h1>Filipino Question</h1>
                 <p>Read each passage and answer the questions given.</p>
             </div>
             

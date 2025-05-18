@@ -1,9 +1,12 @@
 @extends('head')
 
+@section('title', 'Student Results')
+
 @section('content')
     <!-- Main Content -->
     <div class="main-content">
         <div class="dashboard">
+
             <!-- English Language Results -->
             <div class="results-section">
                 <div class="results-header">
